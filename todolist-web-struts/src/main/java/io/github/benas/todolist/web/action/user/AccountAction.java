@@ -247,10 +247,12 @@ public class AccountAction extends BaseAction {
     }
 
     private boolean newPasswordDoesNotMatchConfirmationPassword() {
+        // deepcode ignore ReturnsPassword: <please specify a reason of ignoring this>
         return !changePasswordForm.getNewPassword().equals(changePasswordForm.getConfirmationPassword());
     }
 
     private boolean incorrectCurrentPassword(User user) {
+        // deepcode ignore ReturnsPassword: <please specify a reason of ignoring this>
         return !changePasswordForm.getCurrentPassword().equals(user.getPassword());
     }
 
